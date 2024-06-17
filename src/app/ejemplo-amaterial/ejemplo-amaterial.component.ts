@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import {MatCard, MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
+import { MaterialModule } from '../angulara-material/material/material.module';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -27,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-ejemplo-amaterial',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatCardModule, MatFormFieldModule, MatTableModule, MatInputModule],
+  imports: [MaterialModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule, MatDividerModule],
   templateUrl: './ejemplo-amaterial.component.html',
   styleUrl: './ejemplo-amaterial.component.css'
 })
